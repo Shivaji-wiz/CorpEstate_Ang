@@ -1,0 +1,44 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #887d7d;
+    padding: 10px;
+}
+
+.navbar-logo {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.navbar-links {
+    margin-left: auto;
+}
+
+.navbar-links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #0d0d0d;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #666;
+}
+
+/* Font Awesome icons styles (requires linking Font Awesome CSS) */
+.fa-building:before {
+    content: "\f0f7";
+}

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="property-card" *ngFor="let prop of properties">
+        <div class="property-image">
+            <img [src]="prop.imageUrl" alt="Property Image">
+            <!-- <img src="../assets/i1.webp" alt="Property Image"> -->
+        </div>
+        <div class="property-details">
+            <div class="property-info">
+                <h3>{{ prop.property_Name }}</h3>
+                <p>Price: {{ prop.property_Price }}</p>
+                <p>Description: {{ prop.property_Description }}</p>
+            </div>
+            <div class="property-meta">
+                <div class="meta-item">
+                    <strong>Seller Name:</strong> {{ prop.seller_Name }}
+                </div>
+                <div class="meta-item">
+                    <strong>Seller Contact:</strong> {{ prop.seller_Contact }}
+                </div>
+            </div>
+            <!-- <div class="property-status">
+        <span class="status-label" [ngClass]="prop.approved ? 'approved' : 'pending'">
+          {{ prop.approved ? 'Approved' : 'Pending' }}
+        </span> -->
+            <!-- </div> -->
+        </div>
+    </div>
