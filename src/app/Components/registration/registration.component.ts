@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
+  username!: string;
+  email!: string;
+  role!: string;
+  password!: string;
+  passwordVisible: boolean = false;
 
+  togglePasswordVisibility() {
+    this.passwordVisible = !this.passwordVisible;
+  }
+
+  onSubmit() {
+    // Handle form submission here
+  }
 }
