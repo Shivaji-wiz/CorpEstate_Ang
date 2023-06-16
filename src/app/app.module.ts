@@ -9,7 +9,12 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
+import { HomeComponent } from './Components/home/home.component';
+import { AdminDashboardComponent } from './Components/dashboard/admin-dashboard/admin-dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { ForgotPasswordComponent } from './Components/forgot-password-function/forgot-password/forgot-password.component';
+import { EnterEmailComponent } from './Components/forgot-password-function/enter-email/enter-email.component';
+import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     NavbarComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HomeComponent,
+    AdminDashboardComponent,
+    ForgotPasswordComponent,
+    EnterEmailComponent,
+    SellerDashboardComponent
   ],
   imports: [
     BrowserModule,

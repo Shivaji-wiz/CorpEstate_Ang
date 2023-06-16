@@ -1,0 +1,29 @@
+.bg-home {
+    background-image: url('assets/21099946.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-login {
+    background-image: url('assets/lg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-dashboard {
+    background: linear-gradient(45deg,#9982cf,#7462ff,#b7ece3,#23d5ab);
+    background-size: cover;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }    
+}
