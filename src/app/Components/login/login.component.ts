@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,23 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  
   username!: string;
   password!: string;
+
+  constructor(private router: Router){
+
+  }
+
+  ngOnInit(){
+    document.body.className = 'bg-login';
+  }
+
 
   onSubmit() {
     // Handle login logic here
     // You can use the username and password values
     console.log('Username: ' + this.username);
     console.log('Password: ' + this.password);
-  }
-
-  forgotPassword() {
-    // Handle forgot password logic here
-    console.log('Forgot Password clicked');
-  }
-
-  register() {
-    // Handle register logic here
-    console.log('Register clicked');
+    if(this.username==="AdminA" && this.password==="AdminA@123"){
+      this.router.navigate(['/admin-dashboard']);
+    }else if(this.username==="user" && this.password==="user@123"){
+      this.router.navigate(['/dashboard'])
+    }
   }
 }

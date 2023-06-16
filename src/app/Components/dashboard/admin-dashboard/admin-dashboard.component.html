@@ -1,9 +1,5 @@
-<div class="lgout">
-    <button class="button" style="vertical-align:middle" (click)="logOut()"><span>Logout </span></button>
-</div>
-
 <div class="container">
-    <div class="property-card" *ngFor="let prop of properties">
+    <div class="property-card" *ngFor="let prop of unApprovedProperties">
         <div class="property-image">
             <img [src]="prop.imageUrl" alt="Property Image">
             <!-- <img src="../assets/i1.webp" alt="Property Image"> -->
@@ -26,9 +22,14 @@
         <!-- <span class="status-label" [ngClass]="prop.approved ? 'approved' : 'pending'">
           {{ prop.approved ? 'Approved' : 'Pending' }}
         </span> -->
-                <button class="button-view">
-                    View Property
-                </button>
+        <button class="button-approve">
+            Approve
+        </button>
+        <button class="button-reject">
+            Reject
+        </button>
             </div>
         </div>
     </div>
+
+    <p>admin-dashboard works</p>

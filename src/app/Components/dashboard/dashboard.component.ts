@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Property } from 'src/app/Models/Property';
 import { CRUDFunctionsService } from 'src/app/Services/crud-functions.service';
 
@@ -9,10 +10,12 @@ import { CRUDFunctionsService } from 'src/app/Services/crud-functions.service';
 })
 export class DashboardComponent {
   
-  constructor(private crudFunctionsService: CRUDFunctionsService) { }
+  constructor(private crudFunctionsService: CRUDFunctionsService, private router: Router) { }
   properties: Property[] = [];
 
   ngOnInit() {
+    document.body.className = 'bg-dashboard';
+
     this.crudFunctionsService.getAllProperties().subscribe({
       next: (response) => {
         console.log(response);
@@ -23,5 +26,9 @@ export class DashboardComponent {
         console.error(error);
       }
     });
+  }
+
+  logOut() {
+    this.router.navigate(['']);
   }
 }

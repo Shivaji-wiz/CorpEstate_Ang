@@ -9,8 +9,9 @@
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #dbcdcd;
+    /* background-color: #c9dcf1; */
     padding: 10px;
+    background: rgba (255, 255, 255,.4); backdrop-filter: blur (10px);
 }
 
 .navbar-logo {
@@ -19,8 +20,10 @@
 }
 
 .navbar-brand {
+    font-style: italic;
     font-weight: bold;
-    margin-left: 5px;
+    font-size: 21px;
+    margin-left: 0px;
 }
 
 .navbar-links {
@@ -28,6 +31,8 @@
 }
 
 .navbar-links a {
+    font-style: italic;
+    font-weight: 200;
     margin-left: 10px;
     text-decoration: none;
     color: #0d0d0d;
@@ -35,7 +40,8 @@
 }
 
 .navbar-links a:hover {
-    color: #666;
+    color: #666666;
+    font-size: 20px;
 }
 
 /* Font Awesome icons styles (requires linking Font Awesome CSS) */

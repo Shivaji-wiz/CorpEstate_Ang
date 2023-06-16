@@ -6,17 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
+  
   username!: string;
   email!: string;
   role!: string;
   password!: string;
   passwordVisible: boolean = false;
 
+  ngOnInit() {
+    document.body.className = 'bg-login';
+  }
+
   togglePasswordVisibility() {
     this.passwordVisible = !this.passwordVisible;
   }
 
   onSubmit() {
-    // Handle form submission here
+    console.log(this.username);
+    console.log(this.email);
+    console.log(this.role);
+    console.log(this.password);
   }
 }
