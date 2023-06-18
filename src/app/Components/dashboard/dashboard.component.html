@@ -2,6 +2,8 @@
     <button class="button" style="vertical-align:middle" (click)="logOut()"><span>Logout </span></button>
 </div>
 
+<button (click)="CreatePage()">Create</button>
+
 <div class="container">
     <div class="property-card" *ngFor="let prop of properties">
         <div class="property-image">
@@ -26,6 +28,12 @@
         <!-- <span class="status-label" [ngClass]="prop.approved ? 'approved' : 'pending'">
           {{ prop.approved ? 'Approved' : 'Pending' }}
         </span> -->
+                <button class="button-approve">
+                    Update
+                </button>
+                <button class="button-reject" (click)="deleteProperty(prop.property_ID)">
+                    Delete
+                </button>   
                 <button class="button-view">
                     View Property
                 </button>
