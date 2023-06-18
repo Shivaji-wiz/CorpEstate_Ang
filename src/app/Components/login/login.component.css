@@ -102,3 +102,27 @@ button:hover {
 .register a:hover {
     color: #0056b3;
 }
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.fa {
+    font-size: 18px;
+}
+
+.fa-eye {
+    color: #666;
+}
+
+.fa-eye-slash {
+    color: #666;
+}

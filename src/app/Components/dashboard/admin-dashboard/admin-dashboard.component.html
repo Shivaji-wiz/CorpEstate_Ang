@@ -1,4 +1,16 @@
+<div class="lgout">
+    <button class="button" style="vertical-align:middle" (click)="logOut()"><span>Logout </span></button>
+</div>
+
 <div class="container">
+
+    <div class="button-container">
+        <button class="button-green" (click)="CreatePage()">Create</button>
+        <button class="button-grey" (click)="UserDetailsPage()">User Details</button>
+        <button class="button-blue" (click)="SellerDashboardPage()">Seller Dashboard</button>
+    </div>
+
+
     <div class="property-card" *ngFor="let prop of unApprovedProperties">
         <div class="property-image">
             <img [src]="prop.imageUrl" alt="Property Image">
@@ -22,14 +34,12 @@
         <!-- <span class="status-label" [ngClass]="prop.approved ? 'approved' : 'pending'">
           {{ prop.approved ? 'Approved' : 'Pending' }}
         </span> -->
-        <button class="button-approve">
+        <button class="button-approve" (click)="approveProperty(prop)">
             Approve
         </button>
-        <button class="button-reject">
+        <button class="button-reject" (click)="rejectProperty(prop.property_ID)">
             Reject
         </button>
             </div>
         </div>
     </div>
-
-    <p>admin-dashboard works</p>

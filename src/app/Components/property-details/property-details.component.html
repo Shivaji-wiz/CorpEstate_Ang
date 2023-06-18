@@ -1,0 +1,39 @@
+
+
+<!-- <h2 class="title">Property Details</h2>
+<div class="search-container">
+    <input type="number" [(ngModel)]="propertyId" placeholder="Enter Property ID">
+    <button class="search-button" (click)="getPropertyDetails()">Search</button>
+</div>
+
+<div class="property-container" *ngIf="property">
+    <h4 class="property-heading">Property Details:</h4>
+    <p><strong>Property ID:</strong> {{ property.property_ID }}</p>
+    <p><strong>Property Name:</strong> {{ property.property_Name }}</p>
+    <p><strong>Property Price:</strong> {{ property.property_Price }}</p>
+    <p><strong>Property Description:</strong> {{ property.property_Description }}</p>
+    <img class="property-image" [src]="property.imageUrl" alt="Property Image">
+</div> -->
+
+<div class="card">
+    <div class="card-content">
+        <h2 class="title">Property Details</h2>
+        <div class="search-container">
+            <input type="number" [(ngModel)]="propertyId" placeholder="Enter Property ID" class="search-input">
+            <button class="search-button" (click)="getPropertyDetails()">Search</button>
+        </div>
+
+        <div class="property-container" *ngIf="property">
+            <div class="content-left">
+                <h4 class="property-heading">Property Details:</h4>
+                <p><strong>Property ID:</strong> {{ property.property_ID }}</p>
+                <p><strong>Property Name:</strong> {{ property.property_Name }}</p>
+                <p><strong>Property Price:</strong> {{ property.property_Price }}</p>
+                <p><strong>Property Description:</strong> {{ property.property_Description }}</p>
+            </div>
+            <div class="content-right">
+                <img class="property-image" [src]="property.imageUrl" alt="Property Image">
+            </div>
+        </div>
+    </div>
+</div>

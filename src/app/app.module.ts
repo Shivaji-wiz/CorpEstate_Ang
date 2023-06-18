@@ -14,7 +14,14 @@ import { AdminDashboardComponent } from './Components/dashboard/admin-dashboard/
 import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './Components/forgot-password-function/forgot-password/forgot-password.component';
 import { EnterEmailComponent } from './Components/forgot-password-function/enter-email/enter-email.component';
-import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.component';
+import { CreatePropertyComponent } from './Components/property-crud/create-property/create-property.component';
+import { UpdatePropertyComponent } from './Components/property-crud/update-property/update-property.component';
+import { ViewPropertyComponent } from './view-property/view-property.component';
+import { PropertyDetailsComponent } from './Components/property-details/property-details.component';
+import { BuyerDashboardComponent } from './Components/dashboard/buyer-dashboard/buyer-dashboard.component';
+import { UserDetailsComponent } from './Components/user-info/user-details/user-details.component';
+import { UserPropertiesComponent } from './Components/user-info/user-properties/user-properties.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +34,13 @@ import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.co
     AdminDashboardComponent,
     ForgotPasswordComponent,
     EnterEmailComponent,
-    SellerDashboardComponent
+    CreatePropertyComponent,
+    UpdatePropertyComponent,
+    ViewPropertyComponent,
+    PropertyDetailsComponent,
+    BuyerDashboardComponent,
+    UserDetailsComponent,
+    UserPropertiesComponent,
   ],
   imports: [
     BrowserModule,
