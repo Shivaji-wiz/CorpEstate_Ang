@@ -2,15 +2,16 @@
     <button class="button" style="vertical-align:middle" (click)="logOut()"><span>Logout </span></button>
 </div>
 
-<!-- <button (click)="CreatePage()">Create</button> -->
-
 <div class="container">
 
-    <div class="button-container" *ngIf="isLoggedIn()">
-        <button class="button-green" (click)="CreatePage()">List Property</button>
+    <div class="button-container">
+        <button class="button-green" (click)="CreatePage()">Create</button>
+        <button class="button-grey" (click)="UserDetailsPage()">User Details</button>
+        <button class="button-blue" (click)="SellerDashboardPage()">Seller Dashboard</button>
     </div>
 
-    <div class="property-card" *ngFor="let prop of properties">
+
+    <div class="property-card" *ngFor="let prop of unApprovedProperties">
         <div class="property-image">
             <img [src]="prop.imageUrl" alt="Property Image">
             <!-- <img src="../assets/i1.webp" alt="Property Image"> -->
@@ -21,27 +22,24 @@
                 <p>Price: {{ prop.property_Price }}</p>
                 <p>Description: {{ prop.property_Description }}</p>
             </div>
-            <!-- <div class="property-meta">
+            <div class="property-meta">
                 <div class="meta-item">
                     <strong>Seller Name:</strong> {{ prop.seller_Name }}
                 </div>
                 <div class="meta-item">
                     <strong>Seller Contact:</strong> {{ prop.seller_Contact }}
                 </div>
-            </div> -->
+            </div>
             <div class="property-status">
         <!-- <span class="status-label" [ngClass]="prop.approved ? 'approved' : 'pending'">
           {{ prop.approved ? 'Approved' : 'Pending' }}
         </span> -->
-                <button class="button-approve" *ngIf="isLoggedIn()" (click)="PropertyUpdatePage(prop)">
-                    Update
-                </button>
-                <button class="button-reject" *ngIf="isLoggedIn()" (click)="deleteProperty(prop.property_ID)">
-                    Delete
-                </button>   
-                <button class="button-view" (click)="ViewProperty(prop)">
-                    View Property
-                </button>
+        <button class="button-approve" (click)="approveProperty(prop)">
+            Approve
+        </button>
+        <button class="button-reject" (click)="rejectProperty(prop.property_ID)">
+            Reject
+        </button>
             </div>
         </div>
     </div>

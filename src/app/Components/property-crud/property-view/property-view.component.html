@@ -1,0 +1,13 @@
+<div class="overlay">
+    <div class="modal">
+        <img [src]="property.imageUrl" alt="Property Image">
+        <div class="content">
+            <h2>{{ property.property_Name }}</h2>
+            <p><strong>Price:</strong> {{ property.property_Price }}</p>
+            <p><strong>Description:</strong> {{ property.property_Description }}</p>
+            <p *ngIf="isLoggedIn()"><strong>Seller Name:</strong> {{ property.seller_Name }}</p>
+            <p *ngIf="isLoggedIn()"><strong>Seller Contact:</strong> {{ property.seller_Contact }}</p>
+            <button (click)="closeModal()">Close</button>
+        </div>
+    </div>
+</div>
